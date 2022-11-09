@@ -26,9 +26,9 @@ class _QuizAppState extends State<QuizApp> {
       appBar: AppBar(
         title: Text("True Citizen"),
         centerTitle: true,
-        backgroundColor: Colors.blueGrey,
+        //backgroundColor: Colors.blueGrey,
       ),
-      backgroundColor: Colors.blueGrey,
+      //backgroundColor: Colors.blueGrey,
 
       // Builder is used to pass a context of scaffold
       body: Builder(
@@ -51,10 +51,12 @@ class _QuizAppState extends State<QuizApp> {
                   height: 120.0,
                   child: Center(child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Text(questionBank[_currentQuestionIndex].questionText, style: TextStyle(
-                      fontSize: 16.0,
-                      color: Colors.white
-                    ),),
+                    child: Text(questionBank[_currentQuestionIndex].questionText,
+                    //   style: TextStyle(
+                    //   fontSize: 16.0,
+                    //   color: Colors.white
+                    // ),
+                    ),
                   )),
                 ),
               ),
