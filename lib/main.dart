@@ -13,12 +13,7 @@ ThemeData _buildAppTheme() {
     ),
     scaffoldBackgroundColor: Colors.red,
     backgroundColor: Colors.amber,
-    textTheme: TextTheme(
-      bodyText2: TextStyle(
-        fontSize: 16.9,
-        color: Colors.white,
-      )
-    )
+    textTheme: _appTextTheme(base.textTheme)
   );
 }
 
@@ -29,12 +24,26 @@ TextTheme _appTextTheme(TextTheme base) {
     ),
     titleLarge: base.titleLarge?.copyWith(
       fontSize: 18.0
+    ),
+    caption: base.caption?.copyWith(
+      fontWeight: FontWeight.w400,
+      fontSize: 14
+    ),
+    bodyText1: base.bodyText2?.copyWith(
+      fontSize: 16.9,
+      color: Colors.white,
+    ),
+    bodyText2: base.bodyText2?.copyWith(
+      fontSize: 16.9,
+      color: Colors.white,
+      fontFamily: "Lobster"
+    ).apply(
+      fontFamily: "Lobster",
     )
-
   );
 }
 
 void main() => runApp(new MaterialApp(
-  theme: _appTheme,
+  //theme: _appTheme, //when applied app goes dark, doesn't work for now
   home: QuizApp(),
 ));
